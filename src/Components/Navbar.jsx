@@ -10,7 +10,7 @@ const Navbar = () => {
   const navOptions = (
     <>
       <li>
-        <NavLink to="/#home" className="flex items-center gap-1 px-2 py-1">
+        <NavLink to="/#banner" className="flex items-center gap-1 px-2 py-1">
           <AiFillHome className="text-lg" /> Home
         </NavLink>
       </li>
@@ -38,9 +38,9 @@ const Navbar = () => {
   );
 
   return (
-    <div className="my-6 font-inter">
+    <div className="sticky top-0 lg:top-6 z-50 lg:mt-6 font-inter">
       <div
-        className="navbar shadow-md text-white max-w-6xl mx-auto lg:rounded-3xl px-6 py-3"
+        className="navbar border-b-2 lg:border-2 border-gray-50 shadow-md text-white max-w-6xl mx-auto lg:rounded-3xl px-6 py-3"
         style={{
           backgroundImage:
             "linear-gradient(111.4deg, rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2%)",
@@ -74,9 +74,9 @@ const Navbar = () => {
           </div>
           <div>
             <img
-              src="https://i.ibb.co/46SYDbL/abrar-logo.png"
+              src="https://i.ibb.co/84sF1H1D/abrar-final-logo.png"
               alt="Abrar logo"
-              className="w-20 lg:w-32"
+              className="w-20 lg:w-20"
               loading="lazy"
             />
           </div>
@@ -84,7 +84,7 @@ const Navbar = () => {
 
         {/* Navbar Center */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-lg gap-2">{navOptions}</ul>
+          <ul className="menu menu-horizontal px-1 text-lg gap-4">{navOptions}</ul>
         </div>
 
         {/* Navbar End */}
