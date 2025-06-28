@@ -1,6 +1,11 @@
 import React from "react";
 import { IoIosArrowDropdown } from "react-icons/io";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiMongodb } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io5";
+import { useState } from "react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -15,7 +20,57 @@ const fadeUp = {
   }),
 };
 
+const floatVariants = {
+  float1: {
+    y: [0, -10, 0],
+    transition: {
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut",
+      repeatType: "mirror",
+    },
+  },
+  float2: {
+    y: [0, -15, 0],
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+      repeatType: "mirror",
+    },
+  },
+  float3: {
+    y: [0, -8, 0],
+    transition: {
+      duration: 3.5,
+      repeat: Infinity,
+      ease: "easeInOut",
+      repeatType: "mirror",
+    },
+  },
+  float4: {
+    y: [0, -12, 0],
+    transition: {
+      duration: 4.2,
+      repeat: Infinity,
+      ease: "easeInOut",
+      repeatType: "mirror",
+    },
+  },
+  float5: {
+    y: [0, -10, 0],
+    transition: {
+      duration: 3.8,
+      repeat: Infinity,
+      ease: "easeInOut",
+      repeatType: "mirror",
+    },
+  },
+};
+
 const Banner = () => {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <section className="relative min-h-screen w-full px-6 py-16 md:py-24 bg-transparent text-white font-inter overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
@@ -50,14 +105,15 @@ const Banner = () => {
             custom={2}
             className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl leading-relaxed mx-auto md:mx-0"
           >
-            I design and develop modern, responsive web applications using technologies like{" "}
+            I design and develop modern, responsive web applications using
+            technologies like{" "}
             <span className="text-[#11c7fc] font-semibold">React</span>,{" "}
             <span className="text-cyan-300 font-semibold">Tailwind CSS</span>, and{" "}
-            <span className="text-yellow-300 font-semibold">Node.js</span>. I also build scalable
-            backends with{" "}
+            <span className="text-yellow-300 font-semibold">Node.js</span>. I also
+            build scalable backends with{" "}
             <span className="text-green-300 font-semibold">Express</span> and{" "}
-            <span className="text-emerald-300 font-semibold">MongoDB</span>. Currently studying
-            Computer Science.
+            <span className="text-emerald-300 font-semibold">MongoDB</span>.
+            Currently studying Computer Science.
           </motion.p>
 
           <motion.div
@@ -65,16 +121,22 @@ const Banner = () => {
             custom={3}
             className="flex flex-wrap gap-3 pt-4 justify-center md:justify-start text-sm font-medium"
           >
-            {["React", "Tailwind", "Node.js", "MongoDB", "Express", "Firebase", "JWT"].map(
-              (tech, idx) => (
-                <span
-                  key={idx}
-                  className="px-4 py-1.5 rounded-full bg-white/10 border border-white/10 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_10px_#11c7fc77]"
-                >
-                  {tech}
-                </span>
-              )
-            )}
+            {[
+              "React",
+              "Tailwind",
+              "Node.js",
+              "MongoDB",
+              "Express",
+              "Firebase",
+              "JWT",
+            ].map((tech, idx) => (
+              <span
+                key={idx}
+                className="px-4 py-1.5 rounded-full bg-white/10 border border-white/10 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_10px_#11c7fc77]"
+              >
+                {tech}
+              </span>
+            ))}
           </motion.div>
 
           <motion.div
@@ -95,18 +157,69 @@ const Banner = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right: Image */}
+        {/* Right: Image with Hover Icons */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-[#11c7fc] shadow-[0_0_50px_rgba(17,199,252,0.4)]"
+          onHoverStart={() => setHovered(true)}
+          onHoverEnd={() => setHovered(false)}
+          className="relative group w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-[#11c7fc] shadow-[0_0_50px_rgba(17,199,252,0.4)]"
         >
+          {/* Hover Icons Behind Image - only show & animate on lg+ */}
+          <div className="hidden lg:flex absolute inset-0 z-0 items-center justify-center gap-6 flex-wrap pointer-events-none">
+            <motion.div
+              animate={hovered ? "float1" : false}
+              variants={floatVariants}
+              className="text-[#61DBFB] text-5xl"
+              style={{ position: "absolute", top: "10%", left: "15%" }}
+            >
+              <FaReact />
+            </motion.div>
+
+            <motion.div
+              animate={hovered ? "float2" : false}
+              variants={floatVariants}
+              className="text-[#38BDF8] text-5xl"
+              style={{ position: "absolute", top: "25%", right: "15%" }}
+            >
+              <RiTailwindCssFill />
+            </motion.div>
+
+            <motion.div
+              animate={hovered ? "float3" : false}
+              variants={floatVariants}
+              className="text-[#4DB33D] text-5xl"
+              style={{ position: "absolute", bottom: "20%", left: "25%" }}
+            >
+              <SiMongodb />
+            </motion.div>
+
+            <motion.div
+              animate={hovered ? "float4" : false}
+              variants={floatVariants}
+              className="text-[#68A063] text-5xl"
+              style={{ position: "absolute", bottom: "15%", right: "25%" }}
+            >
+              <FaNodeJs />
+            </motion.div>
+
+            <motion.div
+              animate={hovered ? "float5" : false}
+              variants={floatVariants}
+              className="text-[#F7DF1E] text-5xl"
+              style={{ position: "absolute", top: "50%", left: "50%" }}
+            >
+              <IoLogoJavascript />
+            </motion.div>
+          </div>
+
+          {/* Profile Image */}
           <img
             src="https://i.ibb.co/gFTHkkvf/BestPic.jpg"
             alt="Atef Abrar"
-            className="w-full h-full object-cover object-center transition-transform duration-500 ease-in-out hover:scale-105"
+            className="relative z-10 w-full h-full object-cover object-center transition-transform duration-500 ease-in-out hover:scale-105"
           />
         </motion.div>
       </div>
