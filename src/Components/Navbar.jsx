@@ -1,10 +1,36 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
+  const navOptions = (
+    <>
+      <li>
+        {" "}
+        <Link>About Me</Link>{" "}
+      </li>
+      <li>
+        {" "}
+        <Link>Skills</Link>{" "}
+      </li>
+      <li>
+        {" "}
+        <Link>Education</Link>{" "}
+      </li>
+      <li>
+        {" "}
+        <Link>Projects</Link>{" "}
+      </li>
+      <li>
+        {" "}
+        <Link>Contact</Link>{" "}
+      </li>
+    </>
+  );
+
   return (
     <div className="my-6">
       <div
-        className="navbar shadow-md text-white max-w-6xl mx-auto md:rounded-3xl px-6 py-3"
+        className="navbar shadow-md text-white max-w-6xl mx-auto lg:rounded-3xl px-6 py-3"
         style={{
           backgroundImage:
             "linear-gradient(111.4deg, rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2%)",
@@ -33,29 +59,40 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 text-black rounded-box z-10 mt-3 w-52 p-2 shadow"
             >
-              <li><a>Item 1</a></li>
-              <li><a>Item 3</a></li>
+              {navOptions}
             </ul>
           </div>
-          <a className="btn btn-ghost text-2xl font-bold tracking-wide">Abrar</a>
+          <div>
+            <img
+              src="https://i.ibb.co/46SYDbL/abrar-logo.png"
+              alt="name_logo"
+              className="w-20 lg:w-32"
+            />
+          </div>
         </div>
 
         {/* Navbar Center */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-            <li><a>Item 3</a></li>
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
 
         {/* Navbar End (Fancy Button) */}
         <div className="navbar-end">
-          <button className="relative px-5 py-2 h-12 bg-black text-white font-bold rounded-full overflow-hidden group transition-all duration-300">
-            <span className="relative z-10">Button</span>
-            <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-200 rotate-12 scale-x-0 group-hover:scale-x-100 origin-right transition-transform duration-500 z-0"></span>
-            <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-400 rotate-12 scale-x-0 group-hover:scale-x-100 origin-right transition-transform duration-700 z-0"></span>
-            <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-600 rotate-12 scale-x-0 group-hover:scale-x-100 origin-right transition-transform duration-1000 z-0"></span>
-            <span className="absolute top-2.5 left-6 opacity-0 group-hover:opacity-100 text-white transition-opacity duration-700 z-10">Explore!</span>
+          <button
+            class="relative cursor-pointer 
+               py-2 px-4 text-xs          {# Default/Phone: Smallest #}
+               lg:py-3 md:px-6 md:text-sm {# Medium screens: Slightly larger #}
+               
+               text-center font-barlow inline-flex justify-center  text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline-2 focus:outline-white focus:outline-offset-4 overflow-hidden"
+          >
+            <span class="relative z-20">Resume</span>
+
+            <span class="absolute left-[-75%] top-0 h-full w-[50%] bg-white/20 rotate-12 z-10 blur-lg group-hover:left-[125%] transition-all duration-1000 ease-in-out"></span>
+
+            <span class="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[20%] rounded-tl-lg border-l-2 border-t-2 top-0 left-0"></span>
+            <span class="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute group-hover:h-[90%] h-[60%] rounded-tr-lg border-r-2 border-t-2 top-0 right-0"></span>
+            <span class="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[60%] group-hover:h-[90%] rounded-bl-lg border-l-2 border-b-2 left-0 bottom-0"></span>
+            <span class="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[20%] rounded-br-lg border-r-2 border-b-2 right-0 bottom-0"></span>
           </button>
         </div>
       </div>
