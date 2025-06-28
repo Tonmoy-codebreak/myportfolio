@@ -1,34 +1,44 @@
 import React from "react";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
+import { AiFillHome } from "react-icons/ai";
+import { IoCodeSlashOutline } from "react-icons/io5";
+import { PiChalkboardTeacherFill } from "react-icons/pi";
+import { MdOutlineFolderOpen } from "react-icons/md";
+import { RiContactsFill } from "react-icons/ri";
 
 const Navbar = () => {
   const navOptions = (
     <>
       <li>
-        {" "}
-        <Link>About Me</Link>{" "}
+        <NavLink to="/#home" className="flex items-center gap-1 px-2 py-1">
+          <AiFillHome className="text-lg" /> Home
+        </NavLink>
       </li>
       <li>
-        {" "}
-        <Link>Skills</Link>{" "}
+        <NavLink to="/#skills" className="flex items-center gap-1 px-2 py-1">
+          <IoCodeSlashOutline className="text-lg" /> Skills
+        </NavLink>
       </li>
       <li>
-        {" "}
-        <Link>Education</Link>{" "}
+        <NavLink to="/#education" className="flex items-center gap-1 px-2 py-1">
+          <PiChalkboardTeacherFill className="text-lg" /> Education
+        </NavLink>
       </li>
       <li>
-        {" "}
-        <Link>Projects</Link>{" "}
+        <NavLink to="/#projects" className="flex items-center gap-1 px-2 py-1">
+          <MdOutlineFolderOpen className="text-lg" /> Projects
+        </NavLink>
       </li>
       <li>
-        {" "}
-        <Link>Contact</Link>{" "}
+        <NavLink to="/#contact" className="flex items-center gap-1 px-2 py-1">
+          <RiContactsFill className="text-lg" /> Contact
+        </NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="my-6">
+    <div className="my-6 font-inter">
       <div
         className="navbar shadow-md text-white max-w-6xl mx-auto lg:rounded-3xl px-6 py-3"
         style={{
@@ -36,7 +46,7 @@ const Navbar = () => {
             "linear-gradient(111.4deg, rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2%)",
         }}
       >
-        {/* Navbar Start (Logo + Dropdown) */}
+        {/* Navbar Start */}
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -65,35 +75,33 @@ const Navbar = () => {
           <div>
             <img
               src="https://i.ibb.co/46SYDbL/abrar-logo.png"
-              alt="name_logo"
+              alt="Abrar logo"
               className="w-20 lg:w-32"
+              loading="lazy"
             />
           </div>
         </div>
 
         {/* Navbar Center */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navOptions}</ul>
+          <ul className="menu menu-horizontal px-1 text-lg gap-2">{navOptions}</ul>
         </div>
 
-        {/* Navbar End (Fancy Button) */}
+        {/* Navbar End */}
         <div className="navbar-end">
-          <button
-            class="relative cursor-pointer 
-               py-2 px-4 text-xs          {# Default/Phone: Smallest #}
-               lg:py-3 md:px-6 md:text-sm {# Medium screens: Slightly larger #}
-               
-               text-center font-barlow inline-flex justify-center  text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline-2 focus:outline-white focus:outline-offset-4 overflow-hidden"
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative cursor-pointer py-2 px-4 text-xs lg:py-3 md:px-6 md:text-sm text-center font-barlow inline-flex justify-center text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline-2 focus:outline-white focus:outline-offset-4 overflow-hidden"
           >
-            <span class="relative z-20">Resume</span>
-
-            <span class="absolute left-[-75%] top-0 h-full w-[50%] bg-white/20 rotate-12 z-10 blur-lg group-hover:left-[125%] transition-all duration-1000 ease-in-out"></span>
-
-            <span class="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[20%] rounded-tl-lg border-l-2 border-t-2 top-0 left-0"></span>
-            <span class="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute group-hover:h-[90%] h-[60%] rounded-tr-lg border-r-2 border-t-2 top-0 right-0"></span>
-            <span class="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[60%] group-hover:h-[90%] rounded-bl-lg border-l-2 border-b-2 left-0 bottom-0"></span>
-            <span class="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[20%] rounded-br-lg border-r-2 border-b-2 right-0 bottom-0"></span>
-          </button>
+            <span className="relative z-20">Resume</span>
+            <span className="absolute left-[-75%] top-0 h-full w-[50%] bg-white/20 rotate-12 z-10 blur-lg group-hover:left-[125%] transition-all duration-1000 ease-in-out"></span>
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[20%] rounded-tl-lg border-l-2 border-t-2 top-0 left-0"></span>
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute group-hover:h-[90%] h-[60%] rounded-tr-lg border-r-2 border-t-2 top-0 right-0"></span>
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[60%] group-hover:h-[90%] rounded-bl-lg border-l-2 border-b-2 left-0 bottom-0"></span>
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[20%] rounded-br-lg border-r-2 border-b-2 right-0 bottom-0"></span>
+          </a>
         </div>
       </div>
     </div>
