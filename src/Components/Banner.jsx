@@ -1,11 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosArrowDropdown } from "react-icons/io";
-import { motion, useAnimation } from "framer-motion";
-import { FaReact, FaNodeJs } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io5";
-import { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-scroll"; // ✅ Import from react-scroll
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -18,54 +14,6 @@ const fadeUp = {
       ease: "easeOut",
     },
   }),
-};
-
-const floatVariants = {
-  float1: {
-    y: [0, -10, 0],
-    transition: {
-      duration: 3,
-      repeat: Infinity,
-      ease: "easeInOut",
-      repeatType: "mirror",
-    },
-  },
-  float2: {
-    y: [0, -15, 0],
-    transition: {
-      duration: 4,
-      repeat: Infinity,
-      ease: "easeInOut",
-      repeatType: "mirror",
-    },
-  },
-  float3: {
-    y: [0, -8, 0],
-    transition: {
-      duration: 3.5,
-      repeat: Infinity,
-      ease: "easeInOut",
-      repeatType: "mirror",
-    },
-  },
-  float4: {
-    y: [0, -12, 0],
-    transition: {
-      duration: 4.2,
-      repeat: Infinity,
-      ease: "easeInOut",
-      repeatType: "mirror",
-    },
-  },
-  float5: {
-    y: [0, -10, 0],
-    transition: {
-      duration: 3.8,
-      repeat: Infinity,
-      ease: "easeInOut",
-      repeatType: "mirror",
-    },
-  },
 };
 
 const Banner = () => {
@@ -106,8 +54,7 @@ const Banner = () => {
             className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl leading-relaxed mx-auto md:mx-0"
           >
             I design and develop modern, responsive web applications using
-            technologies like{" "}
-            <span className="text-[#11c7fc] font-semibold">React</span>,{" "}
+            technologies like <span className="text-[#11c7fc] font-semibold">React</span>,{" "}
             <span className="text-cyan-300 font-semibold">Tailwind CSS</span>, and{" "}
             <span className="text-yellow-300 font-semibold">Node.js</span>. I also
             build scalable backends with{" "}
@@ -157,7 +104,7 @@ const Banner = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right: Image with Hover Icons */}
+        {/* Right: Profile Image only */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -167,55 +114,6 @@ const Banner = () => {
           onHoverEnd={() => setHovered(false)}
           className="relative group w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-[#11c7fc] shadow-[0_0_50px_rgba(17,199,252,0.4)]"
         >
-          {/* Hover Icons Behind Image - only show & animate on lg+ */}
-          <div className="hidden lg:flex absolute inset-0 z-0 items-center justify-center gap-6 flex-wrap pointer-events-none">
-            <motion.div
-              animate={hovered ? "float1" : false}
-              variants={floatVariants}
-              className="text-[#61DBFB] text-5xl"
-              style={{ position: "absolute", top: "10%", left: "15%" }}
-            >
-              <FaReact />
-            </motion.div>
-
-            <motion.div
-              animate={hovered ? "float2" : false}
-              variants={floatVariants}
-              className="text-[#38BDF8] text-5xl"
-              style={{ position: "absolute", top: "25%", right: "15%" }}
-            >
-              <RiTailwindCssFill />
-            </motion.div>
-
-            <motion.div
-              animate={hovered ? "float3" : false}
-              variants={floatVariants}
-              className="text-[#4DB33D] text-5xl"
-              style={{ position: "absolute", bottom: "20%", left: "25%" }}
-            >
-              <SiMongodb />
-            </motion.div>
-
-            <motion.div
-              animate={hovered ? "float4" : false}
-              variants={floatVariants}
-              className="text-[#68A063] text-5xl"
-              style={{ position: "absolute", bottom: "15%", right: "25%" }}
-            >
-              <FaNodeJs />
-            </motion.div>
-
-            <motion.div
-              animate={hovered ? "float5" : false}
-              variants={floatVariants}
-              className="text-[#F7DF1E] text-5xl"
-              style={{ position: "absolute", top: "50%", left: "50%" }}
-            >
-              <IoLogoJavascript />
-            </motion.div>
-          </div>
-
-          {/* Profile Image */}
           <img
             src="https://i.ibb.co/gFTHkkvf/BestPic.jpg"
             alt="Atef Abrar"
@@ -228,14 +126,16 @@ const Banner = () => {
       <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#11c7fc] opacity-20 rounded-full blur-3xl z-[-1]" />
       <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-indigo-700 opacity-20 rounded-full blur-3xl z-[-1]" />
 
-      {/* Scroll Icon */}
+      {/* Scroll Icon → About Me Section */}
       <motion.div
         initial={{ y: 0 }}
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         className="hidden lg:block absolute bottom-32 left-1/2 transform -translate-x-1/2 text-[#11c7fc] text-5xl cursor-pointer"
       >
-        <IoIosArrowDropdown />
+        <Link to="about" smooth={true} duration={600} offset={-60}>
+          <IoIosArrowDropdown />
+        </Link>
       </motion.div>
     </section>
   );

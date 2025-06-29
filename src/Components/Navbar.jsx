@@ -9,7 +9,12 @@ import { RiContactsFill } from "react-icons/ri";
 const navItems = [
   { id: "banner", label: "Home", icon: AiFillHome, offset: -120 },
   { id: "skills", label: "Skills", icon: IoCodeSlashOutline, offset: -80 },
-  { id: "education", label: "Education", icon: PiChalkboardTeacherFill, offset: -80 },
+  {
+    id: "education",
+    label: "Education",
+    icon: PiChalkboardTeacherFill,
+    offset: -80,
+  },
   { id: "projects", label: "Projects", icon: MdOutlineFolderOpen, offset: -80 },
   { id: "contact", label: "Contact", icon: RiContactsFill, offset: 0 },
 ];
@@ -27,7 +32,9 @@ const Navbar = () => {
       <li
         key={id}
         className={`${
-          activeSection === id ? "text-cyan-400 font-semibold" : ""
+          activeSection === id
+            ? "text-blue-900 lg:text-cyan-400 font-semibold"
+            : ""
         }`}
       >
         <Link
@@ -57,8 +64,19 @@ const Navbar = () => {
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
               </svg>
             </div>
             <ul
@@ -78,7 +96,9 @@ const Navbar = () => {
 
         {/* Navbar Center */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-lg gap-4">{renderNavItems()}</ul>
+          <ul className="menu menu-horizontal px-1 text-lg gap-4">
+            {renderNavItems()}
+          </ul>
         </div>
 
         {/* Navbar End */}
@@ -87,14 +107,16 @@ const Navbar = () => {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative cursor-pointer py-2 px-4 text-xs lg:py-3 md:px-6 md:text-sm text-center font-barlow inline-flex justify-center text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline-2 focus:outline-white overflow-hidden"
+            className="relative cursor-pointer py-2 px-4 md:py-3 md:px-8 text-center font-barlow inline-flex justify-center text-sm uppercase text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline-2 focus:outline-white focus:outline-offset-4 overflow-hidden"
           >
             <span className="relative z-20">Resume</span>
+
             <span className="absolute left-[-75%] top-0 h-full w-[50%] bg-white/20 rotate-12 z-10 blur-lg group-hover:left-[125%] transition-all duration-1000 ease-in-out"></span>
-            <span className="absolute h-[20%] w-1/2 border-[#D4EDF9] rounded-tl-lg border-l-2 border-t-2 top-0 left-0" />
-            <span className="absolute h-[60%] w-1/2 border-[#D4EDF9] rounded-tr-lg border-r-2 border-t-2 top-0 right-0 group-hover:h-[90%]" />
-            <span className="absolute h-[60%] w-1/2 border-[#D4EDF9] rounded-bl-lg border-l-2 border-b-2 bottom-0 left-0 group-hover:h-[90%]" />
-            <span className="absolute h-[20%] w-1/2 border-[#D4EDF9] rounded-br-lg border-r-2 border-b-2 bottom-0 right-0" />
+
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[20%] rounded-tl-lg border-l-2 border-t-2 top-0 left-0"></span>
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute group-hover:h-[90%] h-[60%] rounded-tr-lg border-r-2 border-t-2 top-0 right-0"></span>
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[60%] group-hover:h-[90%] rounded-bl-lg border-l-2 border-b-2 left-0 bottom-0"></span>
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-[#D4EDF9] absolute h-[20%] rounded-br-lg border-r-2 border-b-2 right-0 bottom-0"></span>
           </a>
         </div>
       </div>
