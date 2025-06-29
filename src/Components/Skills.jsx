@@ -64,7 +64,7 @@ const Skills = () => {
           My Skills
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10">
           {Object.entries(skills).map(([category, items], idx) => (
             <motion.div
               key={category}
@@ -75,7 +75,15 @@ const Skills = () => {
               viewport={{ once: true, amount: 0.3 }}
               className="relative bg-gradient-to-br from-white/5 to-white/10 border border-white/10 rounded-3xl p-6 backdrop-blur-xl shadow-lg hover:shadow-cyan-500/20 transition duration-300"
             >
-              <h2 className="text-xl font-semibold text-center mb-6 text-cyan-300">
+              <h2
+                className={`text-xl font-semibold text-center mb-6 ${
+                  category === "Frontend"
+                    ? "text-cyan-300"
+                    : category === "Backend"
+                    ? "text-green-400"
+                    : "text-yellow-300"
+                }`}
+              >
                 {category}
               </h2>
 
