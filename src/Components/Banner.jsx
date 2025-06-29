@@ -72,7 +72,7 @@ const Banner = () => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <section className="relative min-h-screen w-full px-6 py-16 md:py-24 bg-transparent text-white font-inter overflow-hidden">
+    <section id="banner" className="relative min-h-screen w-full px-6 py-16 md:py-24 bg-transparent text-white font-inter overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
         {/* Left Content */}
         <motion.div
