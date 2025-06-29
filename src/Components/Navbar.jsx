@@ -4,7 +4,7 @@ import { AiFillHome } from "react-icons/ai";
 import { IoCodeSlashOutline } from "react-icons/io5";
 import { PiChalkboardTeacherFill } from "react-icons/pi";
 import { MdOutlineFolderOpen } from "react-icons/md";
-import { RiContactsFill } from "react-icons/ri";
+import { LuContactRound } from "react-icons/lu";
 
 const navItems = [
   { id: "banner", label: "Home", icon: AiFillHome, offset: -120 },
@@ -16,7 +16,7 @@ const navItems = [
     offset: -80,
   },
   { id: "projects", label: "Projects", icon: MdOutlineFolderOpen, offset: -80 },
-  { id: "contact", label: "Contact", icon: RiContactsFill, offset: 0 },
+  { id: "contact", label: "Contact", icon: LuContactRound, offset: 0 },
 ];
 
 const Navbar = () => {
