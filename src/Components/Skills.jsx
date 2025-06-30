@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import {
+  FaChartPie,
   FaHtml5,
   FaJs,
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { RiShieldKeyholeFill, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiReactrouter,
   SiExpress,
   SiMongodb,
   SiFirebase,
+  SiAxios,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
 import { IoLogoVercel } from "react-icons/io5";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { FiBarChart } from "react-icons/fi";
 
 
 // Main Code xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -29,12 +33,17 @@ const skills = {
     { name: "Tailwind", icon: RiTailwindCssFill, color: "text-cyan-400" },
     { name: "React Router", icon: SiReactrouter, color: "text-pink-400" },
     { name: "React", icon: FaReact, color: "text-cyan-300" },
+    { name: "Axios", icon: SiAxios, color: "text-blue-400" },
+    { name: "Framer Motion", icon: TbBrandFramerMotion, color: "text-pink-400" },
+    { name: "Recharts", icon: FaChartPie, color: "text-indigo-400" }
   ],
   Backend: [
     { name: "Node.js", icon: FaNodeJs, color: "text-green-600" },
     { name: "Express", icon: SiExpress, color: "text-gray-300" },
     { name: "MongoDB", icon: SiMongodb, color: "text-green-400" },
     { name: "Firebase", icon: SiFirebase, color: "text-yellow-400" },
+    { name: "JWT", icon: RiShieldKeyholeFill, color: "text-yellow-400" },
+    
   ],
   Tools: [
     { name: "GitHub", icon: AiFillGithub, color: "text-white" },

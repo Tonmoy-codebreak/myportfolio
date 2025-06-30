@@ -79,7 +79,7 @@ const Projects = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="text-5xl font-extrabold text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r py-2 from-cyan-400 to-blue-700"
+        className="text-5xl font-bold text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r py-2 from-cyan-400 to-blue-700"
       >
         Featured Projects
       </motion.h2>

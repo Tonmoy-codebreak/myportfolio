@@ -76,10 +76,7 @@ const AboutMe = () => {
             variants={itemVariants}
             className="text-lg sm:text-xl text-gray-400 leading-relaxed border-l-4 border-cyan-500 pl-5 italic"
           >
-            Building the front end feels like painting on a limitless canvas. I’m
-            currently pursuing a B.Sc. in CSE at National University while constantly
-            growing, learning, and adding more strokes of possibility with each line
-            of code.
+          Building the front end feels like painting on a limitless canvas. I see coding as both an art and a craft. Every line of code is a new brushstroke that brings ideas to life. I’m passionate about continuously exploring, learning, and creating, turning possibilities into reality with every project
           </motion.p>
         </motion.div>
       </motion.div>
