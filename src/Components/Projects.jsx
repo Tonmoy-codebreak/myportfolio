@@ -94,18 +94,14 @@ const Projects = () => {
             viewport={{ once: true }}
             className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-md hover:shadow-cyan-500/30 transition-all duration-300 group"
           >
-            {/* Overlay Title Bottom Right on Hover */}
+            {/* Background Title on Hover - bottom right */}
             <h3
-              className="pointer-events-none absolute bottom-4 right-4
-                text-white font-extrabold uppercase select-none opacity-0 group-hover:opacity-2
-                transition-opacity duration-300 truncate max-w-[90%]
-                text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[4rem] leading-none"
+              className="pointer-events-none absolute bottom-4 right-4 text-white font-extrabold uppercase select-none opacity-0 group-hover:opacity-10 transition-opacity duration-300 truncate max-w-[90%] text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[3rem] leading-none"
               aria-hidden="true"
             >
               {project.title}
             </h3>
 
-            {/* Actual content */}
             <div className="relative z-10">
               <div className="w-full overflow-hidden rounded-xl mb-4 border border-white/10">
                 <img
@@ -115,7 +111,7 @@ const Projects = () => {
                 />
               </div>
 
-              <h3 className="text-2xl font-semibold mb-2 text-white relative z-20">{project.title}</h3>
+              <h3 className="text-2xl font-semibold mb-2 text-white">{project.title}</h3>
               <p className="text-sm text-gray-300 leading-relaxed mb-4">{project.description}</p>
 
               <ul className="text-sm text-gray-400 space-y-1 mb-4">
@@ -159,6 +155,17 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
+
+      {/* Closing message */}
+      <motion.p
+        variants={fadeIn(projects.length * 0.2 + 0.2)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-center text-gray-400 text-sm sm:text-base mt-16"
+      >
+        This is just the beginning and more meaningful builds are on the way. Stay tuned.
+      </motion.p>
     </section>
   );
 };

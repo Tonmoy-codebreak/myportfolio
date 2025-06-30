@@ -4,6 +4,7 @@ import AboutMe from '../Components/AboutMe';
 import Skills from '../Components/Skills';
 import Education from '../Components/Education';
 import Projects from '../Components/Projects';
+import Contact from '../Components/Contact';
 
 const HomePage = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage = () => {
             <Skills></Skills>
             <Education></Education>
             <Projects></Projects>
+            <Contact></Contact>
             
         </div>
     );
