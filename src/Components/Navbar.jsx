@@ -104,8 +104,8 @@ const Navbar = () => {
         {/* Navbar End */}
         <div className="navbar-end">
           <a
-            href="#"
-            target="_blank"
+            href=""
+            
             rel="noopener noreferrer"
             className="relative cursor-pointer py-2 px-4 md:py-3 md:px-8 text-center font-barlow inline-flex justify-center text-sm uppercase text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline-2 focus:outline-white focus:outline-offset-4 overflow-hidden"
           >

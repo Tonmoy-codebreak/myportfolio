@@ -3,6 +3,7 @@ import {
 } from "react-router";
 import MainLayout from "../Layout/MainLayout";
 import HomePage from "../Pages/HomePage";
+import Details from "../Pages/Details";
 
 
 const router = createBrowserRouter([
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
         {
             index:true,
             element: <HomePage></HomePage>
+        },
+        {
+           path: "/details/:id",
+          element:<Details></Details>
         }
     ]
   },
