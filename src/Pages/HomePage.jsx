@@ -3,6 +3,7 @@ import Banner from '../Components/Banner';
 import AboutMe from '../Components/AboutMe';
 import Skills from '../Components/Skills';
 import Education from '../Components/Education';
+import Projects from '../Components/Projects';
 
 const HomePage = () => {
     return (
@@ -11,6 +12,7 @@ const HomePage = () => {
             <AboutMe></AboutMe>
             <Skills></Skills>
             <Education></Education>
+            <Projects></Projects>
             
         </div>
     );
