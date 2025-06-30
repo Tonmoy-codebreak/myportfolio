@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { AiFillHome } from "react-icons/ai";
 import { IoCodeSlashOutline } from "react-icons/io5";
-import { PiChalkboardTeacherFill } from "react-icons/pi";
 import { MdOutlineFolderOpen } from "react-icons/md";
 import { LuContactRound } from "react-icons/lu";
+import { BsFillMortarboardFill } from "react-icons/bs";
 
 const navItems = [
   { id: "banner", label: "Home", icon: AiFillHome, offset: -120 },
@@ -12,7 +12,7 @@ const navItems = [
   {
     id: "education",
     label: "Education",
-    icon: PiChalkboardTeacherFill,
+    icon: BsFillMortarboardFill ,
     offset: -80,
   },
   { id: "projects", label: "Projects", icon: MdOutlineFolderOpen, offset: -80 },
@@ -44,7 +44,7 @@ const Navbar = () => {
           offset={offset}
           duration={500}
           onSetActive={() => setActiveSection(id)}
-          className="flex items-center gap-1 px-2 py-1 cursor-pointer"
+          className="flex items-center gap-2 px-2 py-1 cursor-pointer"
         >
           <Icon className="text-lg" /> {label}
         </Link>
