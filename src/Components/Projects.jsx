@@ -86,7 +86,7 @@ const Projects = () => {
         "TanStack Query",
       ],
       liveLink: "https://atherfit-1.web.app/",
-      githubLink: "https://i.ibb.co/rGwkxhhZ/13186305-5118461.jpg",
+      githubLink: "https://github.com/Tonmoy-codebreak/aetherfit-frontend",
     },
   ];
 
@@ -103,7 +103,7 @@ const Projects = () => {
           Featured Projects
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-10 lg:max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
