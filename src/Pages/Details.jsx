@@ -7,8 +7,8 @@ const projectChallenges = {
     "While developing LeafLink, I faced challenges with dashboard outlet rendering, needing to rerender specific components dynamically to properly display updated content without full reloads. Managing complex state in this multi-user environment required careful optimization to maintain smooth UX.",
   BlogBox:
     "Setting up the Axios interceptor with JWT tokens was tricky initially, but integrating Firebase JWT resolved authentication smoothly. Additionally, backend token verification setup posed challenges, especially ensuring secure, seamless token refresh and validation flows across the app.",
-  DocTalk:
-    "One major challenge was correctly configuring each doctor's availability based on the current date and real-time appointment schedules. Handling concurrent bookings and keeping the calendar updated in real-time demanded careful synchronization between frontend and backend.",
+  AetherFit:
+    "A significant challenge involved designing and implementing a robust authentication and authorization system to manage three distinct user roles: Admin, Trainer, and Normal Member. The complexity arose in handling dynamic role changes, such as a Normal Member applying for Trainer status, and an Admin's ability to revoke Trainer privileges. This required careful database schema design and intricate backend logic to ensure data integrity and seamless transitions across all user types",
 };
 
 const projectImprovements = {
@@ -16,8 +16,8 @@ const projectImprovements = {
     "Future improvements include implementing live event management with real-time updates, enhancing the gardener networking features, and adding advanced post analytics to help users track engagement. Integration of community-driven event suggestions and better moderation tools are also planned.",
   BlogBox:
     "Upcoming plans involve expanding category options, allowing users to embed YouTube videos directly in their blog posts, and improving search with advanced filters. Additionally, I aim to introduce personalized reading recommendations and richer post formatting capabilities.",
-  DocTalk:
-    "Plans for DocTalk include adding more granular doctor availability options, integrating notification reminders for upcoming appointments, and improving the booking UI for smoother scheduling. I also plan to support multiple visit types with enhanced virtual consultation tools and patient feedback features.",
+  AetherFit:
+    "Looking ahead, my focus for AetherFit includes significantly enhancing the User Interface to achieve an even higher level of polish and intuitiveness. I plan to implement critical features such as a trainer reporting mechanism and a direct 'mail to admin' functionality for improved user feedback. Furthermore, to expand user convenience, I will integrate Facebook login, complementing the existing Google authentication. For trainers, I will introduce the ability to embed YouTube video previews directly within their profiles, enriching their content presentation",
 };
 
 const briefDescriptions = {
@@ -25,8 +25,8 @@ const briefDescriptions = {
     "LeafLink is a dynamic gardening platform that empowers users to share valuable tips, participate in engaging events, and connect with a community of passionate growers. The platform supports both public and private posts, vibrant event sliders, and comprehensive user profiles that foster an interactive and supportive experience.",
   BlogBox:
     "BlogBox is a modern full-stack blogging platform that combines a sleek and intuitive user interface with powerful features such as wishlists, category filtering, and rich animations. It offers secure authentication and a smooth, personalized experience for both reading and creating blogs across devices.",
-  DocTalk:
-    "DocTalk is a user-friendly healthcare appointment system designed to help users find doctors, explore detailed profiles, and book appointments for virtual or in-person visits with real-time availability. The platform simplifies scheduling while ensuring timely access to healthcare professionals with an intuitive interface.",
+  AetherFit:
+    "AetherFit is a full-stack MERN based fitness tracker platform built for a company on a mission to revolutionize the fitness industry. The platform provides a role-based system with Admin, Trainer, and Member experiences while allowing users to book fitness trainers, join curated classes, engage in fitness forums, and track their progress. Whether you're managing classes, becoming a trainer, or just looking for the perfect coach to guide your journey : AetherFit has it all.",
 };
 
 const Details = ({ project, onClose }) => {

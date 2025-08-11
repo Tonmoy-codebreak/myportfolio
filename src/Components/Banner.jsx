@@ -128,7 +128,7 @@ const Banner = () => {
           className="relative group w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-[#11c7fc] shadow-[0_0_50px_rgba(17,199,252,0.4)]"
         >
           <img
-            src="https://i.ibb.co/gFTHkkvf/BestPic.jpg"
+            src="https://i.ibb.co.com/b505LFk6/best-me.png"
             alt="Atef Abrar"
             className="relative z-10 w-full h-full object-cover object-center transition-transform duration-500 ease-in-out hover:scale-105"
           />

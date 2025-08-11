@@ -40,7 +40,7 @@ const timelineItem = {
 const Education = () => {
   const journeyPoints = [
     {
-      year: "2022 - Present",
+      year: "2020 - Present",
       title: "B.Sc. in Computer Science & Engineering",
       institution: "National University of Bangladesh",
       description:
@@ -58,7 +58,7 @@ const Education = () => {
     {
       year: "2025",
       title: "Web Development Bootcamp",
-      institution: "Programming Hero (Renowned Training Company)",
+      institution: "Renowned Training Company",
       description:
         "Joined a rigorous bootcamp to elevate my development skills to a professional standard. Gained hands-on experience, solidified best practices, and embraced full-stack workflows.",
       icon: <FaCode className="text-2xl md:text-4xl text-purple-400" />,

@@ -73,7 +73,7 @@ const Contact = () => {
         {/* Left column: LinkedIn & GitHub */}
         <div className="flex flex-col gap-6 col-span-1">
           <motion.a
-            href="https://www.linkedin.com/in/atef-abrar-9166312a5/"
+            href="https://www.linkedin.com/in/atefabrarhossain/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"

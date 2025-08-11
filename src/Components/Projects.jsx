@@ -67,14 +67,14 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "DocTalk",
-      image: "https://i.ibb.co/hRCjBWjZ/Screenshot-1790.png",
+      title: "AetherFit",
+      image: "https://i.ibb.co/0jJMDgNp/Screenshot-1899.png",
       description:
-        "DocTalk lets users easily find doctors, check their profiles, and book appointments for virtual or in-person visits with real-time availability.",
+        "AetherFit is a full-stack MERN based fitness tracker platform built for a company on a mission to revolutionize the fitness industry.",
       features: [
-        "Doctor directory + filters",
-        "Appointment scheduling",
-        "Responsive profiles",
+        "Role-Based Access Control",
+        "Interactive Dashboard",
+        "Stripe-Based Payment Integration",
         "Clean UI for mobile/desktop",
       ],
       technologies: [
@@ -83,10 +83,10 @@ const Projects = () => {
         "Node.js",
         "Express.js",
         "MongoDB",
-        "JWT",
+        "TanStack Query",
       ],
-      liveLink: "https://doc-talk-tonmoy.netlify.app/",
-      githubLink: "https://github.com/Tonmoy-codebreak/doctalk",
+      liveLink: "https://atherfit-1.web.app/",
+      githubLink: "https://i.ibb.co/rGwkxhhZ/13186305-5118461.jpg",
     },
   ];
 

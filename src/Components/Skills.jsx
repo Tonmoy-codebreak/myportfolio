@@ -132,7 +132,7 @@ const Skills = () => {
                             [category]: null,
                           }))
                         }
-                        className="w-[70%] aspect-square flex flex-col items-center justify-center space-y-2 rounded-xl border border-transparent hover:border-cyan-300 hover:shadow-xl shadow-cyan-200/5 transition-all duration-300 cursor-pointer relative group"
+                        className="w-[70%] aspect-square flex flex-col items-center justify-center space-y-2 rounded-xl border border-transparent  hover:shadow-xl shadow-cyan-200/5 transition-all duration-300 cursor-pointer relative group"
                       >
                         <motion.div
                           whileHover={{ rotate: [0, 5, -5, 0], scale: 1.2 }}
