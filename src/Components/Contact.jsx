@@ -70,8 +70,9 @@ const Contact = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {/* Left column: LinkedIn & GitHub */}
+        {/* Left column: LinkedIn ,github and Phone */}
         <div className="flex flex-col gap-6 col-span-1">
+          {/* linkedin */}
           <motion.a
             href="https://www.linkedin.com/in/atefabrarhossain/"
             target="_blank"
@@ -92,7 +93,7 @@ const Contact = () => {
               LinkedIn
             </motion.span>
           </motion.a>
-
+          {/* github */}
           <motion.a
             href="https://github.com/Tonmoy-codebreak"
             target="_blank"
@@ -113,6 +114,7 @@ const Contact = () => {
               GitHub
             </motion.span>
           </motion.a>
+          
         </div>
 
         {/* Middle column: Email */}
@@ -160,14 +162,23 @@ const Contact = () => {
 
       {/* Quick Response Message */}
       <motion.p
-        className="mt-16 max-w-xl px-4 sm:px-0 mx-auto text-center text-gray-400 text-base sm:text-lg italic"
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        I typically respond within 6 hours. I appreciate your message and look forward to the opportunity to connect.
-      </motion.p>
+  className="mt-16 max-w-xl px-4 sm:px-0 mx-auto text-center text-gray-300 text-base sm:text-lg italic"
+  variants={fadeInUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  Feel free to reach out via <span className="text-gray-100">WhatsApp</span> at{" "}
+  <a 
+    href="https://wa.me/743253534" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="text-green-400 font-bold not-italic hover:underline"
+  >
+    +8801835212768
+  </a>
+  {" "}for a quicker response!
+</motion.p>
     </section>
   );
 };
